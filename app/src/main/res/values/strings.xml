@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Device Tracker</string>
+    <string name="devices">Devices</string>
+    <string name="Remove_all_Devices">Remove all Devices</string>
+    <string name="delete_device">Delete All Devices</string>
+    <string name="save">Save</string>
+
+    <string name="device">Device</string>
+    <string name="device_os">OS</string>
+    <string name="device_manufacturer">Manufacturer</string>
+    <string name="Create">Create</string>
+    <string name="title_device_list">Devices</string>
+    <string name="title_device_detail">Device Detail</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
+    <string name="enter_text_here">Your name...</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="create_device">Create New Device</string>
+</resources>

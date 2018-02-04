@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devicetracker">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.jnj.devicetracker.ApplicationImpl"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="true"
+        >
+
+        <service android:name="com.jnj.devicetracker.sync.SyncService" />
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+
+        <activity
+            android:name="com.jnj.devicetracker.ui.MainActivity"
+            android:label="@string/title_device_list"
+>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+
+        <activity
+            android:name="com.jnj.devicetracker.ui.DeviceDetailActivity"
+            android:label="@string/title_device_detail"
+            android:parentActivityName="com.jnj.devicetracker.ui.MainActivity"
+           >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jnj.devicetracker.ui.MainActivity" />
+        </activity>
+
+
+
+
+        <!--<activity-->
+        <!--android:name="com.jnj.devicetracker.ui.NewDeviceFragment"-->
+        <!--android:label="@string/delete_device"-->
+        <!--android:parentActivityName="com.jnj.devicetracker.ui.MainActivity"-->
+        <!--&gt;-->
+        <!--<meta-data-->
+        <!--android:name="android.support.PARENT_ACTIVITY"-->
+        <!--android:value="com.jnj.devicetracker.ui.MainActivity" />-->
+
+        <!--</activity>-->
+
+    </application>
+
+</manifest>
